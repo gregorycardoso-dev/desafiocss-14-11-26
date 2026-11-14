@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevDay 2027</title>
+  <!-- O enunciado está no arquivo enunciado.md, nesta mesma pasta. -->
+  <style>
+    /* ===== BASE (não mexer) ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      color: #e8ecf4;
+      background-color: #0f1320;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h1 {
+      max-width: 16em;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    section {
+      padding: 3.5rem 0;
+    }
+
+    .botao {
+      display: inline-block;
+      padding: 0.7em 1.5em;
+      font-weight: 700;
+      color: #0f1320;
+      background-color: #5eead4;
+      border-radius: 8px;
+    }
+
+    .topo {
+      padding: 1rem 0;
+      background-color: #0f1320;
+      border-bottom: 1px solid #262c40;
+    }
+
+    .logo {
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #5eead4;
+    }
+
+    .hero {
+      padding: 3rem 1.25rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e2a4a, #0f1320);
+    }
+
+    .hero-data {
+      font-weight: 600;
+      color: #5eead4;
+    }
+
+    .palestrante {
+      padding: 1.5rem;
+      text-align: center;
+      background-color: #181d2e;
+      border: 1px solid #262c40;
+      border-radius: 12px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      font-size: 2.5rem;
+      line-height: 80px;
+      background-color: #262c40;
+      border-radius: 50%;
+    }
+
+    .palestrante p {
+      font-size: 0.875rem;
+      color: #9aa3b8;
+    }
+
+    .selo {
+      padding: 0.2em 0.7em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #0f1320;
+      background-color: #fbbf24;
+      border-radius: 999px;
+    }
+
+    .agenda {
+      background-color: #141829;
+    }
+
+    .sessao {
+      padding: 1rem 0;
+      border-bottom: 1px solid #262c40;
+    }
+
+    .sessao-hora {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: #5eead4;
+    }
+
+    .sessao-sala {
+      font-size: 0.875rem;
+      color: #9aa3b8;
+    }
+
+    .rodape {
+      padding: 2rem 0;
+      font-size: 0.875rem;
+      color: #9aa3b8;
+      border-top: 1px solid #262c40;
+    }
+
+    /* ===== SEU CSS AQUI ===== */
+
+  </style>
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="logo" href="#">&lt;DevDay/&gt;</a>
+
+      <nav aria-label="Principal">
+        <ul class="menu">
+          <li><a href="#palestrantes">Palestrantes</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#ingressos">Ingressos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <p class="hero-data">14 de março de 2027 · Centro de Eventos</p>
+      <h1>Um dia inteiro de código, café e gente boa</h1>
+      <a class="botao" href="#ingressos">Garantir ingresso</a>
+    </section>
+
+    <section id="palestrantes">
+      <div class="container">
+        <h2>Palestrantes</h2>
+
+        <div class="palestrantes-grade">
+          <article class="palestrante">
+            <span class="selo">Keynote</span>
+            <div class="avatar" aria-hidden="true">👩‍💻</div>
+            <h3>Marina Duarte</h3>
+            <p>Arquitetura de front-end</p>
+          </article>
+
+          <article class="palestrante">
+            <div class="avatar" aria-hidden="true">🧑‍🔬</div>
+            <h3>Caio Tavares</h3>
+            <p>APIs com Python</p>
+          </article>
+
+          <article class="palestrante">
+            <div class="avatar" aria-hidden="true">👨‍🎨</div>
+            <h3>Léo Brandão</h3>
+            <p>CSS moderno</p>
+          </article>
+
+          <article class="palestrante">
+            <div class="avatar" aria-hidden="true">👩‍🚀</div>
+            <h3>Bia Nogueira</h3>
+            <p>Banco de dados na prática</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="agenda" id="agenda">
+      <div class="container">
+        <h2>Agenda</h2>
+
+        <ul class="agenda-lista">
+          <li class="sessao">
+            <time class="sessao-hora">09:00</time>
+            <span class="sessao-titulo">Abertura e café</span>
+            <span class="sessao-sala">Saguão</span>
+          </li>
+          <li class="sessao">
+            <time class="sessao-hora">10:00</time>
+            <span class="sessao-titulo">Front-end que escala sem virar bagunça</span>
+            <span class="sessao-sala">Auditório</span>
+          </li>
+          <li class="sessao">
+            <time class="sessao-hora">11:30</time>
+            <span class="sessao-titulo">Sua primeira API com Python</span>
+            <span class="sessao-sala">Sala 2</span>
+          </li>
+          <li class="sessao">
+            <time class="sessao-hora">14:00</time>
+            <span class="sessao-titulo">Layouts sem sofrimento com Flexbox e Grid</span>
+            <span class="sessao-sala">Auditório</span>
+          </li>
+          <li class="sessao">
+            <time class="sessao-hora">16:00</time>
+            <span class="sessao-titulo">Modelando dados do jeito certo</span>
+            <span class="sessao-sala">Sala 2</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape" id="ingressos">
+    <div class="container rodape-conteudo">
+      <p>© 2027 DevDay — evento fictício para aula.</p>
+      <a class="botao" href="#">Comprar ingresso</a>
+    </div>
+  </footer>
+
+</body>
+</html>

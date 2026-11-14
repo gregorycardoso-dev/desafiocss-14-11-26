@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício A — Player de música</title>
+  <!--
+    EXERCÍCIO A — PLAYER DE MÚSICA
+
+    Deixe a barra assim:
+
+    ┌────────────────────────────────────────────────────────────────┐
+    │ [🎵] Lo-fi para programar        ⏮   ▶   ⏭            🔊 ━━━━  │
+    │      Beats do Café                                             │
+    └────────────────────────────────────────────────────────────────┘
+
+    Requisitos
+    1. Três grupos na mesma linha: música à esquerda, controles no meio, volume à direita.
+    2. Os três grupos alinhados pelo centro na vertical.
+    3. A capa fica ao lado do nome da música, com 0.75rem de espaço entre elas.
+    4. Os três botões ficam lado a lado, com 0.5rem de espaço entre eles.
+
+    Regras
+    - Não mexa no HTML nem no CSS da base.
+    - Antes de digitar, responda no papel: quem é o pai? Qual a direção? Como distribuo o espaço?
+  -->
+  <style>
+    /* ===== BASE (não mexer) ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding: 2rem 1rem;
+      font-family: system-ui, sans-serif;
+      color: #f2f0f7;
+      background-color: #14121a;
+    }
+
+    .player {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      background-color: #221f2e;
+      border-radius: 16px;
+    }
+
+    .capa {
+      width: 56px;
+      height: 56px;
+      font-size: 1.75rem;
+      line-height: 56px;
+      text-align: center;
+      background: linear-gradient(135deg, #7c5cff, #ff6b9d);
+      border-radius: 8px;
+    }
+
+    .faixa-info strong,
+    .faixa-info span {
+      display: block;
+    }
+
+    .faixa-info span {
+      font-size: 0.875rem;
+      color: #a7a2b8;
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+      color: inherit;
+      background-color: transparent;
+      border: 1px solid #453f5c;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .play {
+      width: 48px;
+      height: 48px;
+      color: #14121a;
+      background-color: #f2f0f7;
+      border: none;
+    }
+
+    input {
+      width: 100px;
+    }
+
+    /* ===== SEU CSS AQUI ===== */
+   .player{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .faixa{
+      display: flex;
+      gap:0.75rem;
+      align-items: center;
+    }
+    .play{
+      margin: 0.5rem;
+    }
+    .volume{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+  
+  </style>
+</head>
+<body>
+
+  <div class="player">
+    <div class="faixa">
+      <div class="capa" aria-hidden="true">🎵</div>
+      <div class="faixa-info">
+        <strong>Lo-fi para programar</strong>
+        <span>Beats do Café</span>
+      </div>
+    </div>
+
+    <div class="controles">
+      <button aria-label="Anterior">⏮</button>
+      <button class="play" aria-label="Tocar">▶</button>
+      <button aria-label="Próxima">⏭</button>
+    </div>
+
+    <div class="volume">
+      <span aria-hidden="true">🔊</span>
+      <input type="range" aria-label="Volume">
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício C — Galeria</title>
+  <!--
+    EXERCÍCIO C — GALERIA DE FOTOS
+
+    Deixe a galeria assim:
+
+    ┌───────────────┬───────┬───────┐
+    │               │   2   │   3   │
+    │  1 (grande)   ├───────┴───────┤
+    │               │   4 (larga)   │
+    ├───────┬───────┼───────┬───────┤
+    │   5   │   6   │   7   │   8   │
+    └───────┴───────┴───────┴───────┘
+
+    Requisitos
+    1. Quatro colunas de mesma largura, com 1rem de espaço entre as fotos.
+    2. Todas as linhas com 160px de altura. Dica: procure por grid-auto-rows.
+    3. A foto 1 ocupa 2 colunas e 2 linhas. A foto 4 ocupa 2 colunas.
+    4. O emoji fica no centro exato de cada foto (você já fez isso hoje de manhã).
+
+    Regras
+    - Não mexa no HTML nem no CSS da base.
+    - Você já sabe fazer um item ocupar 2 colunas. Como seria para ocupar 2 linhas?
+  -->
+  <style>
+    /* ===== BASE (não mexer) ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding: 2rem 1rem;
+      font-family: system-ui, sans-serif;
+      color: white;
+      background-color: #101418;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .galeria {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .foto {
+      font-size: 3rem;
+      border-radius: 12px;
+    }
+
+    .cor-a {
+      background: linear-gradient(135deg, #ff9a56, #ff5e7e);
+    }
+
+    .cor-b {
+      background: linear-gradient(135deg, #5b8def, #7c5cff);
+    }
+
+    .cor-c {
+      background: linear-gradient(135deg, #2bb3a3, #3a86c8);
+    }
+
+    .cor-d {
+      background: linear-gradient(135deg, #3f8f5a, #9bbf4d);
+    }
+
+    /* ===== SEU CSS AQUI ===== */
+    .galeria {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      height: 80vh;
+      grid-auto-rows: 160px;
+      gap: 1rem;
+      
+    }
+
+    .foto-grande {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .foto-larga {
+      grid-column: span 2;
+    }
+    .foto{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px, solid yellow;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Galeria de viagens</h1>
+
+  <main class="galeria">
+    <div class="foto foto-grande cor-a">🌅</div>
+    <div class="foto cor-b">🏔️</div>
+    <div class="foto cor-c">🌊</div>
+    <div class="foto foto-larga cor-d">🌲</div>
+    <div class="foto cor-c">🏝️</div>
+    <div class="foto cor-d">🌵</div>
+    <div class="foto cor-a">🏜️</div>
+    <div class="foto cor-b">🌃</div>
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício B — Tela de login</title>
+  <!--
+    EXERCÍCIO B — TELA DE LOGIN
+
+    Deixe a tela assim:
+
+    ┌─────────────────── janela inteira ───────────────────┐
+    │                                                      │
+    │                  ┌───────────────┐                   │
+    │                  │ Entrar        │                   │
+    │                  │ E-mail        │                   │
+    │                  │ [___________] │                   │
+    │                  │ Senha         │                   │
+    │                  │ [___________] │                   │
+    │                  │ [  Entrar   ] │                   │
+    │                  │  Esqueci...   │                   │
+    │                  └───────────────┘                   │
+    │                                                      │
+    └──────────────────────────────────────────────────────┘
+
+    Requisitos
+    1. O cartão fica no centro exato da janela, na horizontal E na vertical,
+       e continua no centro quando você redimensiona a janela.
+    2. Dentro do cartão, tudo empilhado, com 1rem de espaço entre os itens.
+    3. Em cada campo, o texto fica em cima e o input embaixo, ocupando a
+       largura toda, com 0.25rem entre eles.
+
+    Regras
+    - Não mexa no HTML nem no CSS da base.
+    - Se centralizou na horizontal mas não na vertical: qual é a altura do pai?
+      Use o DevTools para ver.
+  -->
+  <style>
+    /* ===== BASE (não mexer) ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      color: #1d2433;
+      background: linear-gradient(135deg, #dfe9ff, #f6f0ff);
+    }
+
+    .tela {
+      padding: 1rem;
+    }
+
+    .login {
+      width: 100%;
+      max-width: 360px;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(29, 36, 51, 0.12);
+    }
+
+    .login h1 {
+      font-size: 1.5rem;
+    }
+
+    .login label {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .login input {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #c6cede;
+      border-radius: 8px;
+    }
+
+    .login button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      background-color: #3b5bdb;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .login a {
+      font-size: 0.875rem;
+      text-align: center;
+      color: #3b5bdb;
+    }
+
+    /* ===== SEU CSS AQUI ===== */
+    .tela{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .login{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      gap: 1rem;
+    }
+    label{
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <main class="tela">
+    <form class="login">
+      <h1>Entrar</h1>
+
+      <label>
+        E-mail
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Senha
+        <input type="password" name="senha" required>
+      </label>
+
+      <button type="submit">Entrar</button>
+      <a href="#">Esqueci minha senha</a>
+    </form>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grão &amp; Código — cafeteria para devs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a class="logo" href="#">☕ Grão &amp; Código</a>
+
+      <nav aria-label="Principal">
+        <ul class="menu">
+          <li><a href="#vantagens">Por que aqui?</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="botao topo-botao" href="#cardapio">Pedir agora</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-conteudo">
+        <div class="hero-texto">
+          <h1>Café forte para código limpo</h1>
+          <p>A cafeteria feita para quem programa: internet rápida, tomada em toda mesa e café que não deixa o deploy de sexta dar errado.</p>
+          <div class="hero-acoes">
+            <a class="botao" href="#cardapio">Ver cardápio</a>
+            <a class="botao botao-secundario" href="#contato">Como chegar</a>
+          </div>
+        </div>
+
+        <div class="hero-imagem" role="img" aria-label="Xícara de café">☕</div>
+      </div>
+    </section>
+
+    <section class="vantagens" id="vantagens">
+      <div class="container">
+        <h2>Por que aqui?</h2>
+
+        <div class="vantagens-lista">
+          <article class="vantagem">
+            <span class="vantagem-icone" aria-hidden="true">⚡</span>
+            <h3>Wi-Fi de 1 Gb</h3>
+            <p>Sobe o projeto inteiro antes do café esfriar.</p>
+          </article>
+
+          <article class="vantagem">
+            <span class="vantagem-icone" aria-hidden="true">🔌</span>
+            <h3>Tomada em toda mesa</h3>
+            <p>Ninguém disputa o canto da parede.</p>
+          </article>
+
+          <article class="vantagem">
+            <span class="vantagem-icone" aria-hidden="true">🤫</span>
+            <h3>Sala silenciosa</h3>
+            <p>Para reunião, entrevista ou aquele bug difícil.</p>
+          </article>
+
+          <article class="vantagem">
+            <span class="vantagem-icone" aria-hidden="true">🌙</span>
+            <h3>Aberto até meia-noite</h3>
+            <p>Porque a inspiração não bate ponto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cardapio" id="cardapio">
+      <div class="container">
+        <h2>Cardápio</h2>
+
+        <div class="cardapio-grade">
+          <article class="card card-destaque">
+            <span class="selo">Mais pedido</span>
+            <div class="card-foto" aria-hidden="true">☕</div>
+            <div class="card-corpo">
+              <h3>Espresso duplo</h3>
+              <p>Dois shots de um blend da casa, torra média, com notas de chocolate e caramelo. O combustível oficial das madrugadas de entrega.</p>
+              <div class="card-rodape">
+                <strong class="preco">R$ 9,00</strong>
+                <a class="botao botao-pequeno" href="#">Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-foto" aria-hidden="true">🥛</div>
+            <div class="card-corpo">
+              <h3>Cappuccino</h3>
+              <p>Espresso, leite vaporizado e canela.</p>
+              <div class="card-rodape">
+                <strong class="preco">R$ 14,00</strong>
+                <a class="botao botao-pequeno" href="#">Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-foto" aria-hidden="true">🥐</div>
+            <div class="card-corpo">
+              <h3>Croissant</h3>
+              <p>Massa folhada na manteiga, assada toda manhã. Pode pedir com presunto e queijo ou só com geleia da casa.</p>
+              <div class="card-rodape">
+                <strong class="preco">R$ 12,00</strong>
+                <a class="botao botao-pequeno" href="#">Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-foto" aria-hidden="true">🍰</div>
+            <div class="card-corpo">
+              <h3>Bolo de cenoura</h3>
+              <p>Com cobertura de chocolate de verdade.</p>
+              <div class="card-rodape">
+                <strong class="preco">R$ 11,00</strong>
+                <a class="botao botao-pequeno" href="#">Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-foto" aria-hidden="true">🧀</div>
+            <div class="card-corpo">
+              <h3>Pão de queijo</h3>
+              <p>Porção com seis, saindo do forno a cada meia hora.</p>
+              <div class="card-rodape">
+                <strong class="preco">R$ 7,00</strong>
+                <a class="botao botao-pequeno" href="#">Pedir</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape" id="contato">
+    <div class="container">
+      <div class="rodape-conteudo">
+        <div>
+          <a class="logo" href="#">☕ Grão &amp; Código</a>
+          <p>Café forte para código limpo.</p>
+        </div>
+
+        <div>
+          <h3>Horários</h3>
+          <p>Segunda a sexta: 7h à 0h</p>
+          <p>Sábado: 8h às 22h</p>
+        </div>
+
+        <div>
+          <h3>Contato</h3>
+          <p>Rua das Flores, 123</p>
+          <p>contato@graoecodigo.example</p>
+        </div>
+      </div>
+
+      <p class="rodape-copy">© 2026 Grão &amp; Código — projeto de aula.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
